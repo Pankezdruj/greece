@@ -423,7 +423,7 @@
             <h2 class="section-header">Exclusive tour to Mykonos Island</h2>
             <h5 class="section-subheader">Lorem Ipsum proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</h5>
             <span class="exclusive__restrictions">Some restrictions apply*</span>
-            <button class="button exclusive__button">Book Now</button>
+            <button class="button exclusive__button button-book-now">Book Now</button>
         </div>
     </section>
     
@@ -487,33 +487,36 @@
             </div>
         </div>
     </footer>
-    <div class="overlay ">
-        <div class="overlay__modal overlay__modal-booking overlay_active">
-            <div class="overlay__cross">&times;</div>
+    <div class="overlay">
+        <div class="overlay__modal overlay__modal-booking">
             <h2 class="overlay__header section-header">Please confirm your bookng</h2>
             <div class="overlay__booking">
                 <p class="overlay__data">Mykonos - 180 min</p>
                 <p class="overlay__data">Mykonos - 180 min</p>
                 <p class="overlay__data">Mykonos - 180 min</p>
+                <p class="overlay__price">30 300 $</p>
             </div>
-            <button class="button">book it now</button><br>
-            or<br>
-            <a class="overlay__link">change</a>
+            <div class="overlay__booking">
+                <button class="button">book it now</button><br>
+                or<br>
+                <a class="overlay__link">change</a>
+            </div>
+            <div class="overlay__cross">&times;</div>
         </div>
-        <div class="overlay__modal">
+        <div class="overlay__modal overlay__modal-confirmation">
             <div class="overlay__cross">&times;</div>
             <h2 class="overlay__header section-header">Thank you for the order!</h2>
             <div class="overlay__booking">
-                <p class="overlay__city">Mykonos</p><p class="overlay__time">180 min</p>
-                <p class="overlay__city">Mykonos</p><p class="overlay__time">180 min</p>
-                <p class="overlay__city">Mykonos</p><p class="overlay__time">180 min</p>
+                <p class="overlay__data">Mykonos - 180 min</p>
+                <p class="overlay__data">Mykonos - 180 min</p>
+                <p class="overlay__data">Mykonos - 180 min</p>
             </div>
         </div>
-        <div class="overlay__modal">
+        <div class="overlay__modal overlay__modal-thanks">
             <div class="overlay__cross">&times;</div>
             <h2 class="overlay__header section-header">Thank you for the subscription!</h2>
         </div>
-        <div class="overlay__modal">
+        <div class="overlay__modal overlay__modal-email">
             <div class="overlay__cross">&times;</div>
             <h2 class="overlay__header section-header">Not ready yet? Then join our newsletter!</h2>
             <div class="section-subheader">Sign up for our newsletter and receive latest news on destinations, reviews, offers and more.</div>

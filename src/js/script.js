@@ -16,12 +16,16 @@
     const bookBtn = document.getElementsByClassName('packages__button'),
         customizeLink = document.getElementsByClassName('packages__customize'),
         strings = document.getElementsByClassName('packages__string');
+    let choiceOpened = false;
+
+    const calculatePriceFromObj = data => {
+        return prices[data.city1]*data.time1 + prices[data.city2]*data.time2 + prices[data.city3]*data.time3;
+    }
          
     const calculatePrice = (choiceTime, choiceCity) => {
         let price = 0;
         for (let i = 0; i < choiceTime.length; i++) {
             price += parseInt(choiceTime[i].value) * prices[choiceCity[i].value];
-            console.log(choiceCity[i].value);
         }
         return price;
     }
@@ -55,9 +59,8 @@
 
 
     for (let i = 0; i < bookBtn.length; i++) {
-        bookBtn[i].addEventListener('click', e => {
-        });
         customizeLink[i].addEventListener('click', e => {
+            choiceOpened = !choiceOpened;
             e.preventDefault();
             const times = strings[i].getElementsByClassName('packages__time'),
                 cities = strings[i].getElementsByClassName('packages__city'),
@@ -86,3 +89,76 @@
         });
     }
   });
+
+
+  //BOOKING
+  const overlay = document.querySelector('.overlay'),
+    bookingModal = document.querySelector('.overlay__modal-booking'),
+    price = document.querySelector('.overlay__price');
+
+  showBookingModal = data => {
+    overlay.classList.add('overlay_active');
+    bookingModal.classList.add('overlay_active');
+    const cross = bookingModal.querySelector('.overlay__cross');
+    cross.addEventListener('click', () => {
+        overlay.classList.remove('overlay_active');
+        bookingModal.classList.remove('overlay_active');
+    });
+    price.textContent = calculatePriceFromObj(data) + " $";
+
+    data = {
+        city1: data.city1.charAt(0).toUpperCase() + data.city1.slice(1),
+        city2: data.city2.charAt(0).toUpperCase() + data.city2.slice(1),
+        city3: data.city3.charAt(0).toUpperCase() + data.city3.slice(1),
+        time1: data.time1,
+        time2: data.time2,
+        time3: data.time3
+    }
+
+    const overlayData = bookingModal.getElementsByClassName('overlay__data');
+        overlayData[0].textContent = `${data.city1} - ${data.time1} min`
+        overlayData[1].textContent = `${data.city2} - ${data.time2} min`
+        overlayData[2].textContent = `${data.city3} - ${data.time3} min`
+  };
+
+  const btnBook = document.getElementsByClassName('button-book-now')[0];
+
+    btnBook.addEventListener('click', () => {
+        showBookingModal({
+            city1: "mykonos",
+            city2: "mykonos",
+            city3: "mykonos",
+            time1: "200",
+            time2: "60",
+            time3: "200",
+        });
+    });   
+
+    const btnBookChoic = document.getElementsByClassName('packages__button');
+    for (let i = 0; i < btnBookChoic.length; i++) {
+        btnBookChoic[i].addEventListener('click', e => {
+            const times = strings[i].getElementsByClassName('packages__time'),
+                cities = strings[i].getElementsByClassName('packages__city'),
+                choiceTime = strings[i].getElementsByClassName('packages__choice-time'),
+                choiceCity = strings[i].getElementsByClassName('packages__choice-city');
+            if (choiceOpened) {
+                showBookingModal({
+                    city1: choiceCity[0].value,
+                    city2: choiceCity[1].value,
+                    city3: choiceCity[2].value,
+                    time1: parseInt(times[0].textContent),
+                    time2: parseInt(times[1].textContent),
+                    time3: parseInt(times[2].textContent),
+                });
+            } else {
+                showBookingModal({
+                    city1: cities[0].textContent.toLowerCase() == "south kastoria" ? "southKastoria" : cities[0].textContent.toLowerCase(),
+                    city2: cities[1].textContent.toLowerCase() == "south kastoria" ? "southKastoria" : cities[1].textContent.toLowerCase(),
+                    city3: cities[2].textContent.toLowerCase() == "south kastoria" ? "southKastoria" : cities[2].textContent.toLowerCase(),
+                    time1: parseInt(times[0].textContent),
+                    time2: parseInt(times[1].textContent),
+                    time3: parseInt(times[2].textContent),
+                });
+            }
+        });
+    }

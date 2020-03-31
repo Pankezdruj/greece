@@ -9,14 +9,22 @@
         margin: 0 auto
         display: none
         border-radius: 10%
+        transition: 0.3s all
+        border: none
         &-wrapper
             &-city
                 &::before
                 +before-icon
-                right: -70px
                 background: url('../../img/packages/time_icon.svg')
         &-city
-            margin: 35px auto 0 auto
+            margin: 20px auto 0 auto
+            background-color: #fdd687
+            &:hover
+                color: rgb(213,17,23)
+        &-time
+            background-color: #fdd687
+            &:hover
+                color: rgb(213,17,23)
             
     &__wrapper
         margin-top: 27px

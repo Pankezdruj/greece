@@ -1,6 +1,6 @@
 @media ( max-width: 1201px)
-    .destinations
-        
+    .destinations__wrapper
+        justify-content: space-around
 @media ( max-width: 1200px)
     .packages
         &__string
@@ -18,6 +18,8 @@
             &::after
                 left: 510px
 @media ( max-width: 991px)
+    .destinations__wrapper
+        justify-content: space-between
     .aboutus
         &__img
             width: 270px
@@ -34,7 +36,6 @@
         &__logo
             div
                 font-size: 20px
-
 @media (max-width: 768px)
     .nav
         visibility: visible
@@ -46,7 +47,6 @@
             height: 100%
         &__name
             margin: 0 auto
-        &__book
     .exclusive
         &__content
             width: 450px
@@ -76,6 +76,8 @@
         &__logo
             margin-left: 215px
             margin-top: 15px
+    .destinations__wrapper
+        justify-content: center
     .exclusive
         &__content
             width: 50%
@@ -130,3 +132,8 @@
                 left: 50px
             &::before
                 left: 190px
+@media (max-width: 440px)
+    .destinations 
+        padding-bottom: 20px
+        .section-header
+            font-size: 30px

@@ -9,7 +9,7 @@
         crete: 9,
         sparta: 15,
         athens: 20,
-        south_kastoria: 27
+        southKastoria: 27
     }
 
     //packages
@@ -20,8 +20,8 @@
     const calculatePrice = (choiceTime, choiceCity) => {
         let price = 0;
         for (let i = 0; i < choiceTime.length; i++) {
-            const city = choiceCity[i].value.toLowerCase() == "south kastoria" ? "south_kastoria" : choiceCity[i].value.toLowerCase();
-            price += parseInt(choiceTime[i].value) * prices[city];
+            price += parseInt(choiceTime[i].value) * prices[choiceCity[i].value];
+            console.log(choiceCity[i].value);
         }
         return price;
     }
@@ -34,7 +34,7 @@
             priceWrapper = strings[i].getElementsByClassName('packages__price')[0];
         let price = 0;
         for (let i =0; i < times.length; i++) {
-            const city = cities[i].textContent.toLowerCase() == "south kastoria" ? "south_kastoria" : cities[i].textContent.toLowerCase();
+            const city = cities[i].textContent.toLowerCase() == "south kastoria" ? "southKastoria" : cities[i].textContent.toLowerCase();
             price += parseInt(times[i].textContent) * prices[city];
         }
         priceWrapper.textContent = price + " $";

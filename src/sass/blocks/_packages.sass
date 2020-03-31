@@ -6,7 +6,26 @@
     .section-subheader
         text-align: center
     &__choice
+        margin: 0 auto
         display: none
+        border-radius: 10%
+        transition: 0.3s all
+        border: none
+        &-wrapper
+            &-city
+                &::before
+                +before-icon
+                background: url('../../img/packages/time_icon.svg')
+        &-city
+            margin: 20px auto 0 auto
+            background-color: #fdd687
+            &:hover
+                color: rgb(213,17,23)
+        &-time
+            background-color: #fdd687
+            &:hover
+                color: rgb(213,17,23)
+            
     &__wrapper
         margin-top: 27px
     &__string
@@ -64,6 +83,7 @@
         color: #7e7e7e
         font-size: 13px
         font-weight: 400
+        display: none
         &::before
             +before-icon
             background: url('../../img/packages/time_icon.svg')
@@ -72,6 +92,7 @@
         color: #7e7e7e
         font-size: 13px
         font-weight: 400
+        display: none
         &::before
             +before-icon
             right: 21px
@@ -101,3 +122,8 @@
             color: #fed27a
         font-weight: 400
         text-decoration: underline
+    &__price
+        font-size: 30px
+    &_active
+            display: block
+

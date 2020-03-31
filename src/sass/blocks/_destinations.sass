@@ -19,7 +19,8 @@
         &_white
             display: none
     &__element
-        margin-top: 40px
+        margin-top: 40px               
+           
     &__place-name
         font-size: 20px
         font-weight: 700
@@ -28,3 +29,36 @@
         letter-spacing: 1px
         color: #1289d5
         margin-top: 41px
+
+.img-overlay
+    width: 100%
+    height: 100%
+    position: relative
+    button
+        display: block
+        position: absolute
+        top: 50%
+        transform: translateY(-50%) translateX(-50%)
+        left: 50%
+        margin-top: 0
+        visibility: hidden
+        z-index: 2
+        a 
+            color: #fff
+            text-decoration: none
+            display: block
+            width: 100%
+    &:after 
+        content: ''
+        display: block
+        width: 100%
+        height: 100%
+        top: 0
+        position: absolute
+        background-color: transparent
+        transition: 250ms 
+    &:hover
+        &:after
+            background-color: rgba(18,137,213, .5)
+        button
+            visibility: visible         

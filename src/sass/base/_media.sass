@@ -11,6 +11,12 @@
             width: 180px
         &__property
             width: 180px
+    .newsletter
+        &__logo
+            &::before
+                left: 370px
+            &::after
+                left: 510px
 @media ( max-width: 991px)
     .aboutus
         &__img
@@ -38,6 +44,13 @@
     .exclusive
         &__content
             width: 450px
+    .newsletter
+        &__logo
+            &::before
+                left: 250px
+            &::after
+                left: 390px
+    .bottom
 @media (max-width: 768px)
     .aboutus
         &__wrapper
@@ -65,6 +78,22 @@
             width: 290px
         .section-header
             font-size: 27px
+    .newsletter
+        .section-header
+            width: 550px
+            font-size: 26px
+        .section-subheader
+            margin-top: -10px
+        .form
+            margin-top: 20px
+            button
+                margin-top: 15px
+        &__logo
+            margin-top: -40px
+            &::after
+                left: 160px
+            &::before
+                left: 300px
 @media (max-width: 575px)
     .aboutus
         &__descr
@@ -76,3 +105,22 @@
             width: 300px
         &__content
             width: 100%
+    .newsletter
+        min-height: 400px
+        padding: 40px 0 40px 0
+        .section-header
+            width: 100%
+        .section-subheader
+            margin-top: -10px
+        .form
+            margin-top: 20px
+            &__input
+                width: 290px
+            button
+                margin-top: 15px
+        &__logo
+            margin-top: -60px
+            &::after
+                left: 50px
+            &::before
+                left: 190px

@@ -39,8 +39,15 @@
 @media (max-width: 768px)
     .nav
         visibility: visible
+    .menu
+        visibility: visible    
     .header
-        display: none      
+        display: none  
+    .promo
+        &__title-2
+            font-size: 60px
+        &__title-3
+            font-size: 35px            
     .packages
         &__string
             flex-wrap: wrap
@@ -57,7 +64,6 @@
             &::after
                 left: 390px
     .bottom
-@media (max-width: 768px)
     .aboutus
         &__wrapper
             flex-wrap: wrap
@@ -103,6 +109,18 @@
             &::before
                 left: 300px
 @media (max-width: 575px)
+    .menu
+        &__links
+            font-size: 20px
+        &__item
+            margin: 10px auto    
+    .promo
+        &__title-2
+            font-size: 45px
+        &__title-3
+            font-size: 23px
+        &__descr
+            width: 100%        
     .aboutus
         &__descr
             width: 300px

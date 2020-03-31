@@ -4,19 +4,30 @@
     top: 0
     left: -100%
     width: 45%
-    background-color: rgba(83,162,219 ,0.5 )
+    background-color: rgba(83,162,219 ,0.7 )
+    transition: 0.5s all
+    position: fixed
     &__links
         display: flex
         flex-direction: column
         align-items: center
         justify-content: space-between
-        color: #fff
         font-size: 25px
-        a 
-            margin-top: 10px
     img
         display: block
-        margin: 25px auto    
+        margin: 25px auto  
+        width: 75px
+        height: 75px
+    &__item
+        padding: 15px 0 15px 0
+        width: 100%
+        margin: 20px auto
+        text-align: center
+        a
+            display: block
+            color: #fff
+            text-decoration: none
+
     &_active
         left: 0
 

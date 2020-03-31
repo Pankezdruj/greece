@@ -81,7 +81,7 @@
 
     for (let i = 0; i < menuItems.length; i++){
         menuItems[i].addEventListener('click', () => {
-            burger.classList.remove('burger_active');
+            burger.classList.remove('hamburger_active');
             menuOverlay.classList.remove('menu_active'); 
             menuOverlay.classList.remove('window_active'); 
         });

@@ -16,3 +16,16 @@
             menuOverlay.classList.remove('window_active'); 
         });
     }
+    const destinationInput = document.querySelector('.select-destination'),
+        citiesList = document.querySelector('.destination__cities'),
+        cities = document.querySelectorAll('.destination__cities li');
+    destinationInput.addEventListener('click', function(){
+        citiesList.classList.toggle('destination__cities_active');
+    });
+    cities.forEach(item => {
+        console.log(item);
+        item.addEventListener('click', function(){
+            citiesList.classList.remove('destination__cities_active');
+            destinationInput.value = item.textContent;
+        });
+    });

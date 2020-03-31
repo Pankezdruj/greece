@@ -17,6 +17,12 @@
                 left: 370px
             &::after
                 left: 510px
+    .bottom
+        &__header
+            text-align: center
+    .footer
+        &__menu 
+            padding-left: 10px
 @media ( max-width: 991px)
     .destinations__wrapper
         justify-content: space-between
@@ -36,6 +42,16 @@
         &__logo
             div
                 font-size: 20px
+    .bottom
+        &__element
+            margin: 10px
+    .footer
+        &__menu 
+            margin-left: 20px
+            font-size: 13px
+            justify-content: space-between
+        &__icons
+            width: 200px
 @media (max-width: 768px)
     .nav
         visibility: visible
@@ -56,14 +72,31 @@
             margin: 0 auto
     .exclusive
         &__content
-            width: 450px
+            width: 50%
+            padding: 50px 0 40px 0
+        .section-subheader
+            width: 290px
+        .section-header
+            font-size: 27px
     .newsletter
+        padding: 45px 0 30px
+        .section-header
+            width: 550px
+            font-size: 26px
+        .section-subheader
+            margin-top: -10px
+        .form
+            margin-top: 20px
+            button
+                margin-top: 15px
         &__logo
-            &::before
-                left: 250px
+            margin-top: -40px
             &::after
                 left: 390px
     .bottom
+            left: 160px
+            &::before
+                left: 300px   
     .aboutus
         &__wrapper
             flex-wrap: wrap
@@ -84,30 +117,26 @@
             margin-top: 15px
     .destinations__wrapper
         justify-content: center
-    .exclusive
-        &__content
-            width: 50%
-            padding: 50px 0 40px 0
-        .section-subheader
-            width: 290px
-        .section-header
-            font-size: 27px
-    .newsletter
-        .section-header
-            width: 550px
-            font-size: 26px
-        .section-subheader
-            margin-top: -10px
-        .form
-            margin-top: 20px
-            button
-                margin-top: 15px
-        &__logo
-            margin-top: -40px
-            &::after
-                left: 160px
-            &::before
-                left: 300px
+    .bottom
+        padding: 44px 0 29px 0
+        .container
+            display: flex
+            flex-wrap: wrap
+            justify-content: center  
+            &__element
+                margin-top: 20px
+                p
+                    text-align: center           
+    .footer
+        min-height: 150px
+        .container
+            flex-wrap: wrap
+            justify-content: center
+        &__menu
+            padding-left: 0
+            margin-top: 10px
+        &__icons
+            margin-top: 10px
 @media (max-width: 575px)
     .menu
         &__links
@@ -150,6 +179,12 @@
                 left: 50px
             &::before
                 left: 190px
+    .bottom
+        padding: 30px 0 20px 0
+    .footer
+        .container
+            p
+                text-align: center
 @media (max-width: 440px)
     .destinations 
         padding-bottom: 20px

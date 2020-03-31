@@ -1,5 +1,5 @@
 .footer
-    height: 128px
+    min-height: 128px
     background-color: #292828
     .container
         display: flex
@@ -15,16 +15,17 @@
         display: flex
         align-items: center
         justify-content: center
+    &__icon
+        background-color: #cfcfcf
+        border-radius: 100%
         a
             img
+                border-radius: 0
                 width: 45px
                 height: 45px
                 padding: 10px
-                background-color: #cfcfcf
-                border-radius: 50%
-                cursor: pointer
-            &:nth-child(2)
-                    margin: 0 20px
+        &:nth-child(2)
+                margin: 0 20px
     &__menu
         padding-left: 81px
         width: 341px

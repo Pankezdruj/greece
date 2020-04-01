@@ -121,8 +121,9 @@
             let firstDate = new Date(dateInputs[0].value),
             secondDate = new Date(dateInputs[1].value);
             if (firstDate >= secondDate){
-                console.log('error');
                 dateError.style.transform = 'scale(1)';
+        }else{
+            dateError.style.transform = 'scale(0)';
         }
         }
     }

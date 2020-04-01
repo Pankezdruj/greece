@@ -88,11 +88,22 @@
             menuOverlay.classList.remove('window_active'); 
         });
     }
+
+
+
+
+
     const destinationInput = document.querySelector('.select-destination'),
         citiesList = document.querySelector('.destination__cities'),
         cities = document.querySelectorAll('.destination__cities li');
     destinationInput.addEventListener('click', function(){
-        citiesList.classList.toggle('destination__cities_active');
+        
+        citiesList.style.transform = 'scale(1)';
+    });
+    document.body.addEventListener('click', function(e){
+        if (e.target != destinationInput ){
+            citiesList.style.transform = 'scale(0)';
+        }
     });
     cities.forEach(item => {
         console.log(item);
@@ -101,6 +112,21 @@
             destinationInput.value = item.textContent;
         });
     });
+
+    // datepicker
+    $( ".form__input-date" ).datepicker();
+    // const dateInputs = document.querySelectorAll('.form__input-date');
+    // const dateError = document.querySelector('.date-error');
+    // dateInputs[1].onchange= function(){
+    //     let firstDate = new Date(dateInputs[0].value),
+    //     secondDate = new Date(dateInputs[1].value);
+    //     console.log('error');
+    // if (firstDate => secondDate){
+    //     console.log('error');
+    //     dateError.style.display = 'block';
+    // }
+    // }
+
   });
 
 

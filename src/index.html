@@ -67,9 +67,10 @@
                 <li>Athens</li>
                 <li>South Kastoria</li>
             </ul>
-            <input type="text" class="form__input">
-            <input type="text" class="form__input">
-            <input type="number" placeholder="Guests" class="form__input">
+            <input type="text" placeholder="From" class="form__input form__input-date">
+            <input type="text" placeholder="to" class="form__input form__input-date">
+            <div class="date-error" style="display: none;">First date must be earlier than second!</div>
+            <input type="number" min="1"  step="1" placeholder="Guests" class="form__input">
             <button class="button form__button">Check Availability</button>
         </form>
         </div>
@@ -533,6 +534,8 @@
             </form>
         </div>
     </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

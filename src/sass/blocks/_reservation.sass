@@ -25,24 +25,34 @@
             margin: 10px
             &_big-width
                 width: 267px
+        .date-error
+            color: #9e160a
+            font-size: 13px
+            position: absolute
+            top: -10px
+            transition: 0.5s all
+
         &__button
             margin: 10px
             width: 199px
         input
             padding-left: 19px
         ul
-            transition: 0.5s all
+            transition: 0.8s all
         .destination__cities
-            display: none
-            transition: 0.5s all
-        .destination__cities_active
+            transition: 0.8s all
+            transform: scale(0)
             display: block
             position: absolute
             background: #dbdbdb
             left: 66px
             top: 59px
-            transition: 0.5s all
+            border-radius: 5px
+            width: 200px
+            padding-left: 3px
+            padding-bottom: 3px
             li 
                 list-style-type: none
+                padding-left:  3px
                 &:hover
-                    background: #626161
+                    background: #a5a4a4

@@ -106,7 +106,6 @@
         }
     });
     cities.forEach(item => {
-        console.log(item);
         item.addEventListener('click', function(){
             citiesList.classList.remove('destination__cities_active');
             destinationInput.value = item.textContent;
@@ -115,17 +114,20 @@
 
     // datepicker
     $( ".form__input-date" ).datepicker();
-    // const dateInputs = document.querySelectorAll('.form__input-date');
-    // const dateError = document.querySelector('.date-error');
-    // dateInputs[1].onchange= function(){
-    //     let firstDate = new Date(dateInputs[0].value),
-    //     secondDate = new Date(dateInputs[1].value);
-    //     console.log('error');
-    // if (firstDate => secondDate){
-    //     console.log('error');
-    //     dateError.style.display = 'block';
-    // }
-    // }
+    const dateInputs = document.querySelectorAll('.form__input-date');
+    const dateError = document.querySelector('.date-error');
+    function dateCheck (i){
+        dateInputs[i].onchange= function(){
+            let firstDate = new Date(dateInputs[0].value),
+            secondDate = new Date(dateInputs[1].value);
+            if (firstDate >= secondDate){
+                console.log('error');
+                dateError.style.transform = 'scale(1)';
+        }
+        }
+    }
+    dateCheck(0);
+    dateCheck(1);
 
   });
 

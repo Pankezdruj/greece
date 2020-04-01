@@ -58,7 +58,7 @@
         <div class="container">
             <h3 class="title">Make a Reservation</h3>
         <form action="#" class="form">
-            <input type="text" placeholder="Select Destination" class="form__input form__input_big-width select-destination">
+            <input type="text" placeholder="Select Destination" class="form__input form__input_big-width select-destination" required>
             <ul class ="destination__cities">
                 <li>Santorini</li>
                 <li>Mykonos</li>
@@ -67,10 +67,10 @@
                 <li>Athens</li>
                 <li>South Kastoria</li>
             </ul>
-            <input type="text" placeholder="From" class="form__input form__input-date">
-            <input type="text" placeholder="to" class="form__input form__input-date">
-            <div class="date-error" style="display: none;">First date must be earlier than second!</div>
-            <input type="number" min="1"  step="1" placeholder="Guests" class="form__input">
+            <input type="text" placeholder="From" class="form__input form__input-date" required>
+            <input type="text" placeholder="to" class="form__input form__input-date" required>
+            <div class="date-error" style="transform:scale(0)">First date must be earlier than second!</div>
+            <input type="number" min="1"  step="1" placeholder="Guests" class="form__input" required>
             <button class="button form__button">Check Availability</button>
         </form>
         </div>
